@@ -40,6 +40,22 @@ management:
       exposure:
         include: "*" #auditevents,info,health,metrics,configprops,logfile,shutdown,mappings,threaddump
 ```
+```
+info:
+  app:
+    name: NOMBRE-APP
+    description: Demo project for Spring Boot
+    version: 0.0.1-SNAPSHOT
+    port: ${local.server.port}
+    PID: ${PID}
+  java:
+    vendor: ${java.vm.vendor}
+    version: ${java.version}
+  user:
+    name: ${user.name}
+    timezone: ${user.timezone}
+    country: ${user.country}
+```
 ### Configuraciones para ver las otras api 🔧
 
 ##### Agregue el iniciador Spring Boot Admin Server a sus dependencias:
@@ -65,4 +81,34 @@ public class SpringBootAdminApplication {
     }
 }
 ```
-##### Agregar al yml los 
+##### Agregar al yml las url donde estan montados las demas api
+```
+cloud:
+    discovery:
+      client:
+        simple:
+          instances:
+            api1:
+              - uri: http://localhost:20006/
+                metadata:
+                  management.context-path: /actuator
+            api2:
+              - uri: http://localhost:20004/
+                metadata:
+                  management.context-path: /actuator
+            api3:
+              - uri: http://localhost:20003/
+                metadata:
+                  management.context-path: /actuator
+            api4:
+              - uri: http://localhost:20008/
+                metadata:
+                  management.context-path: /actuator
+
+```
+* _Asi podremos ver informacion de todas las api con tan solo un par de clicks._
+
+## Versionado 📌
+codecentric - [url](https://mvnrepository.com/artifact/de.codecentric/spring-boot-admin-starter-server)
+## Fuente ✒️
+codecentric - [url](https://codecentric.github.io/spring-boot-admin/2.1.6/#_other_discoveryclients)
