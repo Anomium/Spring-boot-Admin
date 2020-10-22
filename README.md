@@ -1,4 +1,6 @@
 # Spring boot Admin
+##### ¿Qué es Spring Boot Admin?
+* _Spring Boot Admin de codecentric es un proyecto comunitario para administrar y monitorear sus aplicaciones Spring Boot ® . Las aplicaciones se registran con nuestro Spring Boot Admin Client (a través de HTTP) o se descubren usando Spring Cloud ® (por ejemplo, Eureka, Consul). La interfaz de usuario es solo una aplicación Vue.js en la parte superior de los puntos finales Spring Boot Actuator._
 
 ### Pre-requisitos 📋
 * _Debe tener instalado el actuator, ya que el Spring Boot Admin leera informacion que expone esa libreria_
