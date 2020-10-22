@@ -5,15 +5,26 @@
 
 ### Instalación 🔧
 
-##### Agregue ```spring-boot-admin-starter-client``` a sus dependencias:
+##### Agregue el iniciador Spring Boot Admin Server a sus dependencias:
 ```
 <dependency>
     <groupId>de.codecentric</groupId>
-    <artifactId>spring-boot-admin-starter-client</artifactId>
+    <artifactId>spring-boot-admin-starter-server</artifactId>
     <version>2.1.6</version>
 </dependency>
 <dependency>
     <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-security</artifactId>
+    <artifactId>spring-boot-starter-web</artifactId>
 </dependency>
+```
+##### Extraiga la configuración del servidor de administración de Spring Boot agregando @EnableAdminServera su configuración:
+```
+@Configuration
+@EnableAutoConfiguration
+@EnableAdminServer
+public class SpringBootAdminApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(SpringBootAdminApplication.class, args);
+    }
+}
 ```
