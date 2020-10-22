@@ -32,9 +32,12 @@ public class SpringBootAdminApplication {
 * _Puede consultar en el localhost:[Puerto definido]//#admin y te redicrecciona a la pagina del spring boot admin._
 
 ### Configuraciones Adicionales 🔧
+##### Esta configuracion activa todas las pestañas, a menos de que configure las que quiera que salgan ```eje: include: auditevents,info ```
 ```
+management:
   endpoints:
     web:
       exposure:
         include: "*" #auditevents,info,health,metrics,configprops,logfile,shutdown,mappings,threaddump
 ```
+
