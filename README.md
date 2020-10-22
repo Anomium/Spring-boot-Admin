@@ -1,7 +1,7 @@
 # Spring boot Admin
 
 ### Pre-requisitos 📋
-* _Debe tener instalado el actuator, ya que el Spring Boot Admin leera informacion de esa libreria_
+* _Debe tener instalado el actuator, ya que el Spring Boot Admin leera informacion que expone esa libreria_
 
 ### Instalación 🔧
 
@@ -28,3 +28,5 @@ public class SpringBootAdminApplication {
     }
 }
 ```
+* _En este punto Spring Boot Admin ya estaria funcionando con la informacion basica._
+### Configuraciones Adicionales 🔧
