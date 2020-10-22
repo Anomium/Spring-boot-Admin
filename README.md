@@ -29,4 +29,12 @@ public class SpringBootAdminApplication {
 }
 ```
 * _En este punto Spring Boot Admin ya estaria funcionando con la informacion basica._
+* _Puede consultar en el localhost:[Puerto definido]//#admin y te redicrecciona a la pagina del spring boot admin._
+
 ### Configuraciones Adicionales 🔧
+```
+  endpoints:
+    web:
+      exposure:
+        include: "*" #auditevents,info,health,metrics,configprops,logfile,shutdown,mappings,threaddump
+```
